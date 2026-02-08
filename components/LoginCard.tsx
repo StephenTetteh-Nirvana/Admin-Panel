@@ -48,7 +48,7 @@ const LoginCard = () => {
   }
 
   return (
-    <main className="flex flex-col sm:flex-col md:flex-row min-h-screen w-full">
+    <main className="flex flex-col sm:flex-col md:flex-row min-h-full w-full">
       {/* FIRST SECTION WITH FORM  */}
       <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center py-3">
         <div>
