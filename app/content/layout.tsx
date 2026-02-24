@@ -12,7 +12,7 @@ export default function RootLayout({
     <SidebarProvider>
       <TooltipProvider>
         <GlobalSidebar/>
-        <main className="flex flex-col gap-1 w-full min-h-screen bg-slate-100">
+        <main className="flex flex-col gap-1 w-full min-h-screen">
           <Navbar/>
           {children}
         </main>

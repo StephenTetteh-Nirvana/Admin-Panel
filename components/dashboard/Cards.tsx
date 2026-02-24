@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card"
 
 import {Badge} from "@/components/ui/badge"
-import VisitorsChart from "./ActiveAccountsCard"
 
 const Cards = () => {
   return (
@@ -99,7 +98,6 @@ const Cards = () => {
           <div className="text-muted-foreground">Meets growth projections</div>
         </CardFooter>
       </Card>
-      <VisitorsChart />
     </div>
   )
 }
