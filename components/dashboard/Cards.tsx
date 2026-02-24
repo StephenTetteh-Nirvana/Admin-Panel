@@ -16,7 +16,7 @@ const Cards = () => {
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
       <Card className="md:max-h-[300px]">
         <CardHeader>
-          <CardDescription>Total Revenue</CardDescription>
+          <CardDescription className="font-bold">Total Revenue</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             $1,250.00
           </CardTitle>
@@ -38,7 +38,7 @@ const Cards = () => {
       </Card>
       <Card  className="md:max-h-[300px]">
         <CardHeader>
-          <CardDescription>New Customers</CardDescription>
+          <CardDescription className="font-bold">New Customers</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             1,234
           </CardTitle>
@@ -60,7 +60,7 @@ const Cards = () => {
       </Card>
       <Card  className="md:max-h-[300px]">
         <CardHeader>
-          <CardDescription>Active Accounts</CardDescription>
+          <CardDescription className="font-bold">Active Accounts</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             45,678
           </CardTitle>
@@ -80,7 +80,7 @@ const Cards = () => {
       </Card>
       <Card className="md:max-h-[300px]">
         <CardHeader>
-          <CardDescription>Growth Rate</CardDescription>
+          <CardDescription className="font-bold">Growth Rate</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             4.5%
           </CardTitle>

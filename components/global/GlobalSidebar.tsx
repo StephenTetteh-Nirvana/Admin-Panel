@@ -22,21 +22,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-import { Avatar,AvatarImage,AvatarFallback,AvatarBadge } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-
-
 import {
   Home,
   LayoutDashboard,
   Inbox,
   ShoppingBasket,
   Settings,
-  User,
 } from "lucide-react"
-import Link from "next/link"
+
+import { Avatar,AvatarImage,AvatarFallback } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
+import Link from "next/link"
+import Image from "next/image"
 
 // Navigation items for the sidebar 
 const items = [
@@ -71,12 +70,10 @@ const GlobalSidebar = () => {
     <Sidebar>
       {/* SIDEBAR HEADER  */}
       <SidebarHeader>
-        <Button variant="ghost">
-          <div className="flex items-center gap-2">
-            <Home className="h-5 w-5" />
-            {!isCollapsed && <span className="text-xl font-semibold">Admin Panel</span>}
-          </div>
-        </Button>
+        <div className="flex items-center justify-center gap-2 w-full">
+          <Image src="/images/logo.png" alt="Logo" width={20} height={20}/>
+          {!isCollapsed && <span className="text-xl font-bold text-green-500">Toutem</span>}
+        </div>
       </SidebarHeader>
 
       {/* CONTENTS OF THE SIDEBAR  */}
