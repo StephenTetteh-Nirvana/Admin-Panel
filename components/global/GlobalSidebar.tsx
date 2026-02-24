@@ -72,12 +72,12 @@ const GlobalSidebar = () => {
     <Sidebar>
       {/* SIDEBAR HEADER  */}
       <SidebarHeader>
-        <SidebarMenuButton>
+        <Button variant="ghost">
           <div className="flex items-center gap-2">
-            {/* <Home className="h-5 w-5" /> */}
-            <span className="text-xl font-semibold">Admin Panel</span>
+            <Home className="h-5 w-5" />
+            {!isCollapsed && <span className="text-xl font-semibold">Admin Panel</span>}
           </div>
-        </SidebarMenuButton>
+        </Button>
       </SidebarHeader>
 
       {/* CONTENTS OF THE SIDEBAR  */}
@@ -121,23 +121,23 @@ const GlobalSidebar = () => {
       </SidebarContent>
  
       {/* FOOTER OF THE SIDEBAR  */}
-      <SidebarFooter className="px-4 py-2 flex items-center justify-center">
+      <SidebarFooter className="py-2 flex">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon" className="flex items-center">
+            <Button variant="outline" className="w-full flex justify-center px-3">
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
                 <AvatarFallback>AD</AvatarFallback>
               </Avatar>
               {!isCollapsed && (
                 <div className="flex flex-col">
-                  <h4 className="flex-start">Admin</h4>
+                  <h4 className="">Admin</h4>
                   <h4 className="text-slate-500 text-[12px] font-semibold">admin@gmail.com</h4>
                 </div>
               )}
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-32">
+          <DropdownMenuContent className="w-32" side="top">
             <DropdownMenuGroup>
               <DropdownMenuItem variant="destructive">Log out</DropdownMenuItem>
             </DropdownMenuGroup>
