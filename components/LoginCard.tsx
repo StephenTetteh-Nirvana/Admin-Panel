@@ -40,7 +40,7 @@ const LoginCard = () => {
     setLoading(true)
 
     if(loginUserData.email === "admin" && loginUserData.password === "123"){
-      setTimeout(()=>(router.replace('/chatScreen'),800))
+      setTimeout(()=>(router.replace('/content'),800))
     }else{
       alert("Invalid Credentials")
       setLoading(false)
@@ -52,13 +52,13 @@ const LoginCard = () => {
       {/* FIRST SECTION WITH FORM  */}
       <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center py-3">
         <div>
-          <Image
+          {/* <Image
             src="/logo.png"
             alt="Logo Picture"
             width={70}
             height={70}
           />
-          <h1 className=" text-2xl">Chatty</h1>
+          <h1 className=" text-2xl">Chatty</h1> */}
         </div>
         <Card className="w-full max-w-sm">
           <CardHeader>
