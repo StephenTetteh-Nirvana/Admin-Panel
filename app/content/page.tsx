@@ -10,7 +10,6 @@ const page = () =>{
         <p className="text-slate-400">Welcome to your admin dashboard</p>
       </div>
       <Cards />
-
       <div className="flex flex-col md:flex-row w-full gap-3 px-4">
         <SalesPreviewCard />
         <ActiveAccountsCard/>

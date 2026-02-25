@@ -14,22 +14,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-
-import {
-  Home,
-  LayoutDashboard,
-  Inbox,
-  ShoppingBasket,
-  Settings,
-} from "lucide-react"
-
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
+import {LayoutDashboard, Inbox, ShoppingBasket, Settings} from "lucide-react"
 import { Avatar,AvatarImage,AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
@@ -46,7 +32,7 @@ const items = [
   },
   {
     title: "Products",
-    url: "#",
+    url: "/content/products",
     icon: ShoppingBasket,
   },
   {
