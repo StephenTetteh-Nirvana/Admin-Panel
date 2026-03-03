@@ -11,11 +11,11 @@ import {
 import { useMainContext } from "@/context/MainContext"
 
 const ProductDetailsCard = () => {
-  const {setEditCardData} = useMainContext()
+  const {setViewProductDetails} = useMainContext()
 
   return (
     <Card 
-      className="mx-auto w-full max-w-sm"
+      className="mx-auto w-full max-w-sm z-99"
     >
       <CardHeader>
         <CardTitle className="text-xl">Edit Product</CardTitle>
@@ -34,7 +34,7 @@ const ProductDetailsCard = () => {
           variant="outline" 
           size="sm"
           className="w-full cursor-pointer"
-          onClick={()=>setEditCardData(false)}
+          onClick={()=>setViewProductDetails(false)}
         >
           Cancel
         </Button>

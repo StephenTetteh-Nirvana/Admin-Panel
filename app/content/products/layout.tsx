@@ -8,7 +8,5 @@ export default function RootLayout({
     <main className="w-full min-h-screen px-4">
       {children}
     </main>
-   
-   
   );
 }

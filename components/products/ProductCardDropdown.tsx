@@ -15,9 +15,17 @@ import {
   Trash2Icon,
 } from "lucide-react"
 
+import { useRouter } from "next/navigation"
+import { product } from "@/types/types"
 
-const ProductCardDropdown = () => {
-  const {setShowDeleteCard,setEditCardData} = useMainContext()
+interface ProductCardDropdownProps {
+  product: product
+}
+
+
+const ProductCardDropdown = ({ product }: ProductCardDropdownProps) => {
+  const router = useRouter()
+  const {setShowDeleteCard} = useMainContext()
 
   return (
     <DropdownMenu>
@@ -31,7 +39,7 @@ const ProductCardDropdown = () => {
       <DropdownMenuContent>
         <DropdownMenuItem 
           className="cursor-pointer"
-          onClick={()=>setEditCardData(true)}
+          onClick={()=>router.push(`/content/products/editProduct/${product.id}`)}
         >
           <SquarePen/>
           Edit

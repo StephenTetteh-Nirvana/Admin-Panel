@@ -1,5 +1,3 @@
-
-
 import {dummyProducts} from "@/dummyProducts"
 import { product } from "@/types/types"
 import ProductCard from "@/components/products/ProductCard"

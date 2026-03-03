@@ -6,7 +6,7 @@ import DeleteProductCard from "@/components/products/DeleteProductCard"
 import ProductDetailsCard from "./ProductDetailsCard"
 
 const ProductActionPopups = () => {
-    const {showDeleteCard,editCardData} = useMainContext()
+    const {showDeleteCard,viewProductDetails} = useMainContext()
 
     return ( 
       <>
@@ -31,7 +31,7 @@ const ProductActionPopups = () => {
         )}
 
         {/* EDIT PRODUCT CARD DETAILS POPUP  */}
-        {editCardData && (
+        {viewProductDetails && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1}}

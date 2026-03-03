@@ -6,28 +6,29 @@ import { createContext, useContext, useState } from "react"
 type ContextType = {
   showDeleteCard: boolean,
   setShowDeleteCard: (value: boolean) => void,
-  editCardData: boolean,
-  setEditCardData: (value: boolean) => void
+  viewProductDetails: boolean,
+  setViewProductDetails: (value: boolean) => void
 }
 
 // default values instead of undefined to prevent errors because provider will be global.
 const MainContext = createContext<ContextType>({
   showDeleteCard: false,
   setShowDeleteCard: () => {},
-  editCardData: false,
-  setEditCardData: () => {}
+  viewProductDetails: false,
+  setViewProductDetails: () => {}
 })
 
 export const MainContextProvider = ({children}: {children: React.ReactNode}) => {
   const [showDeleteCard, setShowDeleteCard] = useState(false)
-  const [editCardData, setEditCardData] = useState(false)
+  const [viewProductDetails, setViewProductDetails] = useState(false)
+ 
 
   // values to be passed to the provider
   const value = {
     showDeleteCard,
     setShowDeleteCard,
-    editCardData,
-    setEditCardData
+    viewProductDetails,
+    setViewProductDetails
   }
 
   return (

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Eye } from "lucide-react"
 import ProductCardDropdown from "./ProductCardDropdown"
+import ViewDetailsButton from "./ViewDetailsButton"
 
 interface ProductCardProps {
   product: {
@@ -35,7 +36,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
       <CardHeader>
         <CardAction>
-          <ProductCardDropdown/>
+          <ProductCardDropdown product={product}/>
         </CardAction>
         <CardTitle className="line-clamp-3 md:line-clamp-2">{product.title}</CardTitle>
         <CardDescription className="line-clamp-3">
@@ -52,24 +53,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </CardHeader>
 
       <CardFooter>
-        {/* BUTTON FOR DESKTOPS  */}
-        <Button className="lg:visible w-[84%] absolute bottom-2 group" variant="outline">
-          {/* This span will be used for animation when hovering on the button  */}
-          <span className="transition-[width] ease-in-out bg-black/80 w-0 z-99 
-            absolute left-0 h-full rounded-md group-hover:w-full cursor-pointer"></span>
-          <span className="group-hover:z-99 flex items-center gap-1 group-hover:text-white transition-colors ease-in-out cursor-pointer">
-            View Details
-            <Eye/>
-          </span>  
-        </Button>
-
-        {/* BUTTON FOR MOBILE AND TABLETS  */}
-        <Button className="lg:hidden w-[84%] absolute bottom-2">
-          View Details
-          <span>
-            <Eye/>
-          </span>
-        </Button>
+        <ViewDetailsButton/>
       </CardFooter>
     </Card>
   )
