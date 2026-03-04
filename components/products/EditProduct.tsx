@@ -4,6 +4,7 @@ import {dummyProducts} from "@/dummyProducts"
 import { useParams } from "next/navigation"
 import { Card, CardContent } from "../ui/card"
 import { ImageOff } from "lucide-react"
+import EditProductForm from "./EditProductForm"
 
 const EditProduct = () => {
     const { id } = useParams()
@@ -34,7 +35,9 @@ const EditProduct = () => {
                 </CardContent>
             </Card>
           )}
-        <h2>{foundProduct?.title}</h2>
+        
+        {/* PRODUCT DETAILS FORM  */}
+        <EditProductForm/>
       </div>
       </div>
     )
