@@ -1,5 +1,6 @@
 'use client'
 
+import { Product } from "@/types/types"
 import { createContext, useContext, useState } from "react"
 
 // define the type of the context values
@@ -7,7 +8,9 @@ type ContextType = {
   showDeleteCard: boolean,
   setShowDeleteCard: (value: boolean) => void,
   viewProductDetails: boolean,
-  setViewProductDetails: (value: boolean) => void
+  setViewProductDetails: (value: boolean) => void,
+  product: Product | null,
+  setProduct: (value: Product) => void,
 }
 
 // default values instead of undefined to prevent errors because provider will be global.
@@ -15,12 +18,15 @@ const MainContext = createContext<ContextType>({
   showDeleteCard: false,
   setShowDeleteCard: () => {},
   viewProductDetails: false,
-  setViewProductDetails: () => {}
+  setViewProductDetails: () => {},
+  product: null,
+  setProduct: () => {}
 })
 
 export const MainContextProvider = ({children}: {children: React.ReactNode}) => {
   const [showDeleteCard, setShowDeleteCard] = useState(false)
   const [viewProductDetails, setViewProductDetails] = useState(false)
+  const [product,setProduct] = useState<Product | null>(null)
  
 
   // values to be passed to the provider
@@ -28,7 +34,9 @@ export const MainContextProvider = ({children}: {children: React.ReactNode}) => 
     showDeleteCard,
     setShowDeleteCard,
     viewProductDetails,
-    setViewProductDetails
+    setViewProductDetails,
+    product,
+    setProduct
   }
 
   return (

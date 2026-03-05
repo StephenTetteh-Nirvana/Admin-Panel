@@ -16,10 +16,10 @@ import {
 } from "lucide-react"
 
 import { useRouter } from "next/navigation"
-import { product } from "@/types/types"
+import type { Product } from "@/types/types"
 
 interface ProductCardDropdownProps {
-  product: product
+  product: Product
 }
 
 

@@ -53,7 +53,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </CardHeader>
 
       <CardFooter>
-        <ViewDetailsButton/>
+        <ViewDetailsButton product={product}/>
       </CardFooter>
     </Card>
   )

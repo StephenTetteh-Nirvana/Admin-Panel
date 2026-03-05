@@ -11,14 +11,14 @@ import {
 import { useMainContext } from "@/context/MainContext"
 
 const ProductDetailsCard = () => {
-  const {setViewProductDetails} = useMainContext()
+  const {setViewProductDetails, product} = useMainContext()
 
   return (
     <Card 
       className="mx-auto w-full max-w-sm z-99"
     >
       <CardHeader>
-        <CardTitle className="text-xl">Edit Product</CardTitle>
+        <CardTitle className="text-xl">{product?.title ?? "Product Name"}</CardTitle>
         <CardDescription>
           Update your product details here. Make sure to save your changes before exiting.
         </CardDescription>

@@ -7,10 +7,10 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { product } from "@/types/types"
+import type { Product } from "@/types/types"
 
 interface EditProductFormProps{
-    product: product | undefined
+    product: Product | undefined
 }
 
 const EditProductForm = ({product}: EditProductFormProps) => {

@@ -17,7 +17,7 @@ const page = () => {
           </Link>
           <h1 className="text-2xl font-bold">Edit Product</h1>
         </div>
-        <p className="text-slate-400">Edit your products here. Make sure to save changes before exiting.</p>
+        <p className="text-slate-400">Update your product information. Make sure to save changes before exiting.</p>
       </div>
 
       <EditProduct/>

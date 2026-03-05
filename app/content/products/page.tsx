@@ -1,5 +1,5 @@
 import {dummyProducts} from "@/dummyProducts"
-import { product } from "@/types/types"
+import type { Product } from "@/types/types"
 import ProductCard from "@/components/products/ProductCard"
 import ProductActionPopups from "@/components/products/ProductActionPopups"
 
@@ -13,12 +13,12 @@ const page = () => {
 
       {/* PRODUCTS CARD  */}
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 mt-2 py-4">
-        {dummyProducts.map((product: product) => (
+        {dummyProducts.map((product: Product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
-      {/* POPUPS THAT WILL BE DISPLAYED FOR EDIT AND DELETE ACTION */}
+      {/* CLIENT COMPONENT THAT WILL DISPLAY EDIT AND DELETE COMPONENTS(so we can maintain the page being a SC) */}
       <ProductActionPopups/>
 
     </div>
