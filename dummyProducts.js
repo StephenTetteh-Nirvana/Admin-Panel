@@ -22,7 +22,7 @@ export const dummyProducts = [{
     id: 3,
     title: "Mens Cotton Jacket",
     price: 55.99,
-    stock: 42,
+    stock: 3,
     category: "men's clothing",
     description:
       "Great outerwear jacket suitable for multiple occasions including hiking, camping, and traveling.",
@@ -30,7 +30,7 @@ export const dummyProducts = [{
   },
   {
    id: 4,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    title: "Fjallraven - Foldsack No. 1 Backpack",
     price: 109.95,
     stock: 0,
     category: "men's clothing",
@@ -41,9 +41,9 @@ export const dummyProducts = [{
   {
     id: 5,
     title:
-      "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "Women's Legends Gold & Silver Dragon Chain",
     price: 695,
-    stock: 12,
+    stock: 5,
     category: "jewelery",
     description:
       "Inspired by the mythical water dragon. Wear inward for love and abundance, outward for protection.",

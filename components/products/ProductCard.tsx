@@ -45,7 +45,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between mb-3">
           <CardTitle>${product.price}</CardTitle>
           <Badge variant="secondary" 
-            className={product && product.stock > 0 ? "bg-green-500/80 font-semibold md:text-[12px] text-white" : "bg-red-500/80 font-semibold md:text-[12px] text-white"}
+            className={product && product.stock == 0 ? "bg-red-500/80 font-semibold md:text-[12px] text-white" : product && product.stock < 10 ? "bg-yellow-500/80 font-semibold md:text-[12px] text-white" : "bg-green-500/80 font-semibold md:text-[12px] text-white"}
           >
             {product && product.stock ? product.stock + " in stock" : "Out of Stock"}
           </Badge>
