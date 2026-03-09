@@ -9,11 +9,11 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import type { Product } from "@/types/types"
 
-interface EditProductFormProps{
-  product: Product | undefined
-}
+// interface AddProductFormProps{
+//   product: Product | undefined
+// }
 
-const EditProductForm = ({product}: EditProductFormProps) => {
+const AddNewProductForm = () => {
   return (
     <div className="w-full mt-5 md:mt-0 py-4 md:py-0">
       <form>
@@ -30,7 +30,7 @@ const EditProductForm = ({product}: EditProductFormProps) => {
                   id="product-name"
                   placeholder="Black Tee"
                   required
-                  value={product?.title}
+              
                   className="font-semibold text-slate-600"
                 />
               </Field>
@@ -44,7 +44,7 @@ const EditProductForm = ({product}: EditProductFormProps) => {
                   id="product-price"
                   placeholder="$0.00"
                   required
-                  value={`$ ${product?.price}`}
+               
                   className="font-semibold text-slate-600"
                 />
               </Field>
@@ -58,7 +58,7 @@ const EditProductForm = ({product}: EditProductFormProps) => {
                   id="product-stock"
                   placeholder="Number of pieces available"
                   required
-                  value={`${product?.stock} available`}
+                 
                   className="font-semibold text-slate-600"
                 />
               </Field>
@@ -76,13 +76,13 @@ const EditProductForm = ({product}: EditProductFormProps) => {
                   id="product-description"
                   placeholder="Add product description here..."
                   className="resize-none font-semibold text-slate-600"
-                  value={product?.description}
+                 
                 />
               </Field>
             </FieldGroup>
           </FieldSet>
           <Field >
-            <Button type="submit" className="bg-[#2666CF] hover:bg-[#2666CF] hover:cursor-pointer">Update</Button>
+            <Button type="submit" className="bg-[#2666CF] hover:bg-[#2666CF] hover:cursor-pointer">Save</Button>
           </Field>
         </FieldGroup>
       </form>
@@ -90,4 +90,4 @@ const EditProductForm = ({product}: EditProductFormProps) => {
   )
 }
 
-export default EditProductForm;
+export default AddNewProductForm;

@@ -17,6 +17,7 @@ import {
 
 import { useRouter } from "next/navigation"
 import type { Product } from "@/types/types"
+import Link from "next/link"
 
 interface ProductCardDropdownProps {
   product: Product
@@ -37,13 +38,14 @@ const ProductCardDropdown = ({ product }: ProductCardDropdownProps) => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem 
-          className="cursor-pointer"
-          onClick={()=>router.push(`/content/products/editProduct/${product.id}`)}
-        >
-          <SquarePen/>
-          Edit
-        </DropdownMenuItem>
+        <Link href={`/content/products/editProduct/${product.id}`}>
+          <DropdownMenuItem 
+            className="cursor-pointer"
+            >
+            <SquarePen/>
+            Edit
+          </DropdownMenuItem>
+        </Link>
         
         <DropdownMenuItem  
           variant="destructive"

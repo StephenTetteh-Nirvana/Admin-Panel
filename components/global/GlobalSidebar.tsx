@@ -15,13 +15,14 @@ import {
 } from "@/components/ui/sidebar"
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
-import {LayoutDashboard, Inbox, ShoppingBasket, Settings} from "lucide-react"
-import { Avatar,AvatarImage,AvatarFallback } from "@/components/ui/avatar"
+import {LayoutDashboard, Inbox, ShoppingBasket, Settings, Layers, UsersRound} from "lucide-react"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 import Link from "next/link"
 import Image from "next/image"
+
 
 // Navigation items for the sidebar 
 const items = [
@@ -36,9 +37,14 @@ const items = [
     icon: ShoppingBasket,
   },
   {
-    title: "Inbox",
+    title: "Categories",
+    url: "/content/categories",
+    icon: Layers,
+  },
+  {
+    title: "Users",
     url: "#",
-    icon: Inbox,
+    icon: UsersRound,
   },
   {
     title: "Settings",
