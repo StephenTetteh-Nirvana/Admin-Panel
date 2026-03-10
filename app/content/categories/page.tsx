@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
 import CategoriesTable from "@/components/categories/CategoriesTable"
+import CategoriesActionPopups from "@/components/categories/CategoriesActionPopups"
+import AddNewCategoryButton from "@/components/categories/AddNewCategoryButton"
 
 const page = () => {
     return (
-      <div>
+      <div className="relative">
         {/* HEADER SECTION  */}
         <div className="flex items-center justify-between w-full">
           <div className="gap-2">
@@ -12,18 +14,14 @@ const page = () => {
             <p className="text-slate-400">View and manage your categories here.</p>
           </div>
           
-          <div>
-            <Button 
-              className="flex items-center gap-2 cursor-pointer bg-[#2666CF] text-white hover:bg-[#2666CF]"
-            >
-              <Plus color="white"/>
-              Add Category
-            </Button>
-          </div>
+          <AddNewCategoryButton/>
         </div>
 
         {/* CATEGORIES TABLE  */}
         <CategoriesTable/>
+
+        {/* POPUPS FOR CATEGORIES PAGE  */}
+        <CategoriesActionPopups/>
       </div>
     )
 }

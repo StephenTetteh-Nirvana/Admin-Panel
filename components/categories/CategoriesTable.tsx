@@ -7,8 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Pen, Trash } from "lucide-react"
-import { Button } from "../ui/button"
+import CategoryTableActions from "./CategoryTableActions"
 
 const invoices = [
   {
@@ -18,7 +17,7 @@ const invoices = [
     paymentMethod: "Credit Card",
   },
    {
-    invoice: "INV001",
+    invoice: "INV002",
     paymentStatus: "Fashion",
     totalAmount: "$250.00",
     paymentMethod: "Credit Card",
@@ -27,12 +26,12 @@ const invoices = [
 
 const CategoriesTable = () => {
   return (
-    <Table>
+    <Table className="border border-slate-300 mt-4 ">
       <TableCaption>A list of all your categories.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px] font-bold">Id</TableHead>
-          <TableHead className="font-bold">Name</TableHead>
+          <TableHead className="font-bold text-center">Name</TableHead>
           <TableHead className="text-right font-bold">Actions</TableHead>
         </TableRow>
       </TableHeader> 
@@ -40,14 +39,9 @@ const CategoriesTable = () => {
         {invoices.map((invoice) => (
           <TableRow key={invoice.invoice}>
             <TableCell className="font-medium">{invoice.invoice}</TableCell>
-            <TableCell>{invoice.paymentStatus}</TableCell>
+            <TableCell className="text-center">{invoice.paymentStatus}</TableCell>
             <TableCell className="flex justify-end">
-                <Button variant="ghost" className="cursor-pointer">
-                  <Pen size={15}/>
-                </Button>
-                <Button variant="ghost" className="cursor-pointer">
-                  <Trash size={15} color="red"/>
-                </Button>
+                <CategoryTableActions/>
             </TableCell>
           </TableRow>
         ))}

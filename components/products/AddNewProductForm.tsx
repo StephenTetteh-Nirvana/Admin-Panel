@@ -22,7 +22,7 @@ const AddNewProductForm = () => {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="product-name"
-                   className="font-bold"
+                  className="font-bold"
                 >
                   Product name
                 </FieldLabel>
@@ -50,7 +50,7 @@ const AddNewProductForm = () => {
               </Field>
               <Field>
                 <FieldLabel htmlFor="product-stock"
-                   className="font-bold"
+                  className="font-bold"
                 >
                   Stock
                 </FieldLabel>

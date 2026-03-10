@@ -9,6 +9,13 @@ type ContextType = {
   setShowDeleteCard: (value: boolean) => void,
   viewProductDetails: boolean,
   setViewProductDetails: (value: boolean) => void,
+  showNewCategory: boolean,
+  setShowNewCategory: (value: boolean) => void,
+  showCategoryDeleteCard: boolean,
+  setShowCategoryDeleteCard: (value: boolean) => void
+  showEditCategoryCard: boolean,
+  setShowEditCategoryCard: (value: boolean) => void
+
   product: Product | null,
   setProduct: (value: Product) => void,
 }
@@ -19,13 +26,27 @@ const MainContext = createContext<ContextType>({
   setShowDeleteCard: () => {},
   viewProductDetails: false,
   setViewProductDetails: () => {},
+  showNewCategory: false,
+  setShowNewCategory: () => {},
+  showCategoryDeleteCard: false,
+  setShowCategoryDeleteCard: () => {},
+  showEditCategoryCard: false,
+  setShowEditCategoryCard: () => {},
+
   product: null,
   setProduct: () => {}
 })
 
 export const MainContextProvider = ({children}: {children: React.ReactNode}) => {
+
+  // STATES FOR COMPONENT POPUPS 
   const [showDeleteCard, setShowDeleteCard] = useState(false)
   const [viewProductDetails, setViewProductDetails] = useState(false)
+  const [showNewCategory,setShowNewCategory] = useState(false)
+  const [showCategoryDeleteCard, setShowCategoryDeleteCard] = useState(false)
+  const [showEditCategoryCard,setShowEditCategoryCard] = useState(false)
+
+  // OTHER GLOBAL STATES 
   const [product,setProduct] = useState<Product | null>(null)
  
 
@@ -35,6 +56,12 @@ export const MainContextProvider = ({children}: {children: React.ReactNode}) => 
     setShowDeleteCard,
     viewProductDetails,
     setViewProductDetails,
+    showNewCategory,
+    setShowNewCategory,
+    showCategoryDeleteCard,
+    setShowCategoryDeleteCard,
+    showEditCategoryCard,
+    setShowEditCategoryCard,
     product,
     setProduct
   }
